@@ -383,9 +383,12 @@
       .cursor, .cursor-ring { display: none; }
       nav { padding: 1.5rem; }
       nav ul { display: none; }
-      .hero { grid-template-columns: 1fr; }
-      .hero-right { display: none; }
-      .hero-left { padding: 6rem 1.5rem 4rem; }
+      .hero { display: block; height: auto; min-height: 100vh; min-height: 100svh; position: relative; }
+      .hero-right { display: block; position: absolute; inset: 0; z-index: 0; }
+      .hero-right img { object-position: 60% center; }
+      .hero-right::after { background: linear-gradient(to top, var(--ink) 18%, rgba(17,17,17,.62) 55%, rgba(17,17,17,.38) 100%); }
+      .hero-left { background: transparent; min-height: 100vh; min-height: 100svh; padding: 6rem 1.5rem 4rem; }
+      .hero-desc { color: var(--text); }
       .filosofia, .reserva-section, .chef-section { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.5rem; }
       .chef-img { height: 300px; }
       .chef-text { padding: 2.5rem 1.5rem; }
